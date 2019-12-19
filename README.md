@@ -1,6 +1,6 @@
 # ROS-Programming
 
-# callback&ensp;&ensp;&ensp;&ensp;ros::spin()&ensp;&ensp;&ensp;&ensp;ros::spinOnce()
+# callback()&ensp;&ensp;&&ensp;&ensp;ros::spin()&ensp;&ensp;&&ensp;&ensp;ros::spinOnce()
 ## ros::spin()
 循环且监听反馈函数（callback)
 
