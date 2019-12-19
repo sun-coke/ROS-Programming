@@ -1,6 +1,6 @@
 # ROS-Programming
 
-#ros::spin()
+## ros::spin()
 循环且监听反馈函数（callback)
 
 循环就是指程序运行到这里，就会一直在这里循环了，这句话后面的程序将不会被执行。
@@ -19,10 +19,8 @@ ros::spin();                 *//调用spin(),统一处理消息*
 ros::spin()不会返回，直到节点被关闭，或者调用ros::shutdown()，或者按下ctrl+C
 
 
-#ros::spinOnce()
-监听反馈函数（callback）
-
-只能监听反馈，不能循环。所以当你需要监听一下的时候，就调用一下这个函数。
+## ros::spinOnce()
+监听反馈函数（callback），只能监听反馈，不能循环。所以当你需要监听一下的时候，就调用一下这个函数。
 这个函数比较灵活，尤其是想控制接收速度的时候。
 ```
 ros::Rate r(10); // 10 hz
@@ -36,7 +34,7 @@ while (should_continue)
 ros::spinOnce()将会在被调用的那一时间点调用所有等待的回调函数.
 
 
-#回调函数与ros::spin()  ros::spinOnce()
+## 回调函数与ros::spin()  ros::spinOnce()
 
 ROS的消息接收回调机制(callbacks and spinning)原理是这样的：除了用户的主程序以外，ROS的socket连接控制进程会在后台接收订阅的消息，所有接收到的消息并不是立即处理，而是等到spin()或者spinOnce()执行时才集中处理。**消息到来并不会立即执行消息处理回调函数，而是在调用ros::spin()或者spinOnce()之后，才进行消息处理的轮转,消息回调函数统一处理订阅话题的消息。**
 
