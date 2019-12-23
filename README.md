@@ -50,7 +50,7 @@ ROS的主循环中需要不断调用ros::spin()或ros::spinOnce()，**两者区�
 # range()和np.arrange()的区别与联系
 ## range(start, stop[, step])
 
-这是一个通用的函数来创建包含算术级数的列表。它最常用于for循环。参数必须是纯整数。如果省略step参数，则默认为1。
+这是一个通用的函数来创建包含算术级数的列表。它最常用于for循环。参数必须是纯整数。如果省略step，则默认为1。
 
 如果省略start参数，则默认为0。完整的形式返回一个普通整数列表。如果步骤是肯定的，最后一个元素是小于停止的最大元素; 如果step是负数，最后一个元素是大于stop的最小元素。 步骤不能为零（否则报错）。
 ```
@@ -88,11 +88,11 @@ array([3, 5])
 ```
 
 ## 区别
-+range()和np.arange()的返回类型不同，range()返回的是range；
-+object，而np.arange()返回的是ndarray类型；
-+range()不支持步长为小数，而np.arange()支持步长(step)为小数；
-+range()和np.arange()都可用于迭代；
-+range()和np.arange()都有三个参数，以第一个参数为起点，第三个参数为步长，截止到第二个参数之前的不包括第二个参数的数据序列。
-+range()可用于迭代，而np.arange作用远不止于此，它是一个序列，可被当做向量使用。
++ range()和np.arange()的返回类型不同，range()返回的是range；
++ object，而np.arange()返回的是ndarray类型；
++ range()不支持步长为小数，而np.arange()支持步长(step)为小数；
++ range()和np.arange()都可用于迭代；
++ range()和np.arange()都有三个参数，以第一个参数为起点，第三个参数为步长，截止到第二个参数之前的不包括第二个参数的数据序列。
++ range()可用于迭代，而np.arange作用远不止于此，它是一个序列，可被当做向量使用。
 
 
